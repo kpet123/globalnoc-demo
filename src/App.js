@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import background from "./Subway_Map.jpg";
 //We could implement the API call in another file
 
 
@@ -30,15 +30,15 @@ class Review extends React.Component{
 
     console.log(this.props.reviewObject[10])
     return (
-      <div style={{fontSize: 10,
+      <div style={{fontSize: 15,
           fontFamily: "Times New Roman",
           padding: 4,
           margin:10,
           borderStyle: 'solid',
-          borderColor: 'white',
+          borderColor: 'darkblue',
           marginRight:60,
           marginLeft:60,
-          backgroundColor: "lightblue"}}>
+          backgroundColor: '#f0fff4',}}>
             <h3 style={{textAlign: 'center',}}> {this.props.reviewObject[10]} </h3>
 
       </div>
@@ -80,7 +80,8 @@ export default class App extends React.Component {
     //If it is still null (which is often the case when initializing the view), then we just don't show the result
     if(this.state.reviewObject){
       return (
-              <div style={{backgroundColor: '#f0fff4',alignItems: 'center',justifyContent: 'center'}}>
+              <div style={{ backgroundImage: `url(${background})` ,
+                  alignItems: 'center',justifyContent: 'center'}}>
 
       
             <Header title="NYC Subway Stations"></Header>
